@@ -1,7 +1,7 @@
 # Community-garden
 Community-garden Project
 
-⛏This README is WIP 
+⛏This README is under construction  
 
 Prerequisites:
 if you do not have dependancies installed, run `npm i`
