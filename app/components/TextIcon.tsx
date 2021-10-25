@@ -15,7 +15,7 @@ export const TextIcon: React.FC<TextIconProps> = ({ children, icon, alignIcon = 
     <div className={`d-flex ${parentDivFlexStyle} justify-content-between align-items-center`}>
       <p style={{ textAlign: textAlign, margin: textPadding }}>{children}</p>
 
-      <div style={{ backgroundColor: Styles.backgroundColor }} className="rounded-circle p-4">
+      <div style={{ backgroundColor: Styles.lightGreenBackgroundColor }} className="rounded-circle p-4">
         <div>{icon}</div>
       </div>
     </div>

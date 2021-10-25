@@ -23,8 +23,9 @@ export const AboutTheProject: React.FC = () => {
     <div>
       <h1 className="mb-5">About the Project</h1>
       <div
-        className="bg-white rounded"
         style={{
+          borderRadius: '6px',
+          overflow: 'hidden', // this class is important if the child divs also have a border radius
           boxShadow: '0 5px 5px -3px rgba(5, 30, 55, 0.1), 0 3px 15px 2px rgba(5, 30, 55, 0.05)',
         }}
       >
@@ -33,13 +34,7 @@ export const AboutTheProject: React.FC = () => {
           // else align icon to the right
           const alignIcon = index % 2 ? 'left' : 'right';
           return (
-            <div
-              key={index}
-              style={{
-                margin: '0 0 70px 0',
-              }}
-              className="bg-white px-4 py-3"
-            >
+            <div key={index} className="bg-white p-4">
               <TextIcon icon={text.icon} alignIcon={alignIcon}>
                 {text.text}
               </TextIcon>
