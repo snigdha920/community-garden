@@ -12,8 +12,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/icons/sapling.svg" />
       </Head>
 
-      <div>Testing bootstrap</div>
-
+      <div></div>
+      
     </div>
   );
 };
