@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-
 const Home: NextPage = () => {
 
   return (
@@ -12,7 +11,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/icons/sapling.svg" />
       </Head>
 
-      <div>Testing bootstrap</div>
 
     </div>
   );
