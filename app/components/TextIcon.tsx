@@ -12,7 +12,7 @@ export const TextIcon: React.FC<TextIconProps> = ({ children, icon, alignIcon = 
   const textAlign = alignIcon === 'right' ? undefined : 'right';
   const textPadding = alignIcon === 'right' ? '0 20px 0 0' : '0 0 0 20px';
   return (
-    <div className={`d-flex ${parentDivFlexStyle} justify-content-between align-items-center m-5`}>
+    <div className={`d-flex ${parentDivFlexStyle} justify-content-between align-items-center`}>
       <p style={{ textAlign: textAlign, margin: textPadding }}>{children}</p>
 
       <div style={{ backgroundColor: Styles.backgroundColor }} className="rounded-circle p-4">

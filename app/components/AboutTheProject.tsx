@@ -12,27 +12,41 @@ export const AboutTheProject: React.FC = () => {
     },
     {
       text: 'In keeping with its mission to serve as a key resource to the campus and its local community partners, the Learning & Research Technologies group in the Division of IT&IRat Cal Poly Pomona has begun the Community Gardens Technology Support Initiative. The goal is to provide community gardens with data that will assist in informed decision-making  and increased crop yields.',
-      icon: <img src="/icons/teamwork.svg" alt="teamwork-icon" width="80px" />,
+      icon: <img src="/icons/teamwork.png" alt="teamwork-icon" width="80px" />,
     },
     {
       text: 'LR&T will provide sensors that collect data such as soil moisture, temperature, and acidity; air temperature; wind speed; and more. These data will be monitored, queried, and made into reports and alerts that will inform the garden.',
-      icon: <img src="/icons/bar-chart.svg" alt="bar-chart-icon" width="80px" />,
+      icon: <img src="/icons/reporting.png" alt="bar-chart-icon" width="80px" />,
     },
   ];
   return (
     <div>
-      {aboutTheProjectParagraphs.map((text, index) => {
-        // if the index is odd then align icon to the left
-        // else align icon to the right
-        const alignIcon = index % 2 ? 'left' : 'right';
-        return (
-          <div key={index}>
-            <TextIcon icon={text.icon} alignIcon={alignIcon}>
-              {text.text}
-            </TextIcon>
-          </div>
-        );
-      })}
+      <h1 className="mb-5">About the Project</h1>
+      <div
+        className="bg-white rounded"
+        style={{
+          boxShadow: '0 5px 5px -3px rgba(5, 30, 55, 0.1), 0 3px 15px 2px rgba(5, 30, 55, 0.05)',
+        }}
+      >
+        {aboutTheProjectParagraphs.map((text, index) => {
+          // if the index is odd then align icon to the left
+          // else align icon to the right
+          const alignIcon = index % 2 ? 'left' : 'right';
+          return (
+            <div
+              key={index}
+              style={{
+                margin: '0 0 70px 0',
+              }}
+              className="bg-white px-4 py-3"
+            >
+              <TextIcon icon={text.icon} alignIcon={alignIcon}>
+                {text.text}
+              </TextIcon>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
