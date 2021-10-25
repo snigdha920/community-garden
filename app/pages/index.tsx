@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { TextElement } from '../components/TextElement';
 
 
 const Home: NextPage = () => {
@@ -20,14 +19,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <h1 onClick={onClickDemoApi}>TODO: landing</h1>
-        <a href="#about">Link to about</a>
-      </div>
-
-      <TextElement />
-
-      <div id="about" style={{width: '100%', height:'511px', margin: '800px 0 0 0', background: 'blue'}}>About</div>
 
     </div>
   );
