@@ -1,6 +1,6 @@
 # Community-garden
 Community-garden Project
 
-Link to the website:
-
-https://community-garden-project.netlify.app/ 
+To run the frontend: 
+1. `cd app`
+2. `npm run dev`
