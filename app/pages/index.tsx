@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/icons/sapling.svg" />
       </Head>
 
-      <TextIcon icon={<img src="/icons/food-safety.svg" alt="food-safety-icon" />}>
+      <TextIcon icon={<img src="/icons/vegetables.png" alt="food-safety-icon" width="80px" />}>
         Improving food security in local communities and access to healthy, locally grown foods are major goals of the
         Community Gardens movement. The community gardens movement provides neighborhoods and communities with access to
         local spaces that can be cultivated for growth of communally grown fruits and vegetables that can provide food
