@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { TextIcon } from '../components/TextIcon';
 
 const Home: NextPage = () => {
-
   return (
     <div>
       <Head>
@@ -11,7 +12,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/icons/sapling.svg" />
       </Head>
 
-
+      <TextIcon icon={<img src="/icons/vegetables.png" alt="food-safety-icon" width="80px" />}>
+        Improving food security in local communities and access to healthy, locally grown foods are major goals of the
+        Community Gardens movement. The community gardens movement provides neighborhoods and communities with access to
+        local spaces that can be cultivated for growth of communally grown fruits and vegetables that can provide food
+        and support to members of that community.
+      </TextIcon>
     </div>
   );
 };
