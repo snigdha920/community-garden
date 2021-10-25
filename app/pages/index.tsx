@@ -2,16 +2,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { AboutTheProject } from '../components/AboutTheProject';
-import { Styles } from '../styles/styles';
 
 const Home: NextPage = () => {
   return (
     <div
       style={{
         padding: '50px 150px',
-        backgroundColor: Styles.lightGrayBackgroundColor,
+        // backgroundColor: Styles.lightGrayBackgroundColor,
         // backgroundColor: Styles.lightGreenBackgroundColor,
-        // backgroundImage: "url('/images/green-lime-watercolor-texture-background.jpg')",
+        backgroundImage: "url('/images/green-lime-watercolor-texture-background.jpg')",
       }}
     >
       <Head>
