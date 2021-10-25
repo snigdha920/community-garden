@@ -4,13 +4,6 @@ import Head from 'next/head';
 
 const Home: NextPage = () => {
 
-  const onClickDemoApi = () => {
-    fetch('/api/hello').then((res) => {
-      console.log(res);
-    });
-  };
-
-
   return (
     <div>
       <Head>
