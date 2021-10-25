@@ -1,5 +1,6 @@
-# community-garden
+# Community-garden
+Community-garden Project
 
-Test commit
+Link to the website:
 
-checking - git push permissions
+https://community-garden-project.netlify.app/ 
