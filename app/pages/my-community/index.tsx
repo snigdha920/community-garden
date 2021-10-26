@@ -7,6 +7,7 @@ import { ButtonElement } from '../../components/elements/ButtonElement';
 import { AddCommunityForm } from '../../components/forms/AddCommunityForm';
 import { AppLayout } from '../../components/layout/AppLayout';
 import { ContentLayout } from '../../components/layout/ContentLayout';
+import { GridLayout } from '../../components/layout/GridLayout';
 import { TextIcon } from '../../components/TextIcon';
 
 const Places: NextPage = () => {
@@ -30,7 +31,7 @@ const Places: NextPage = () => {
               </>
             </TextIcon>
 
-            <div className="row row-cols-md-3 mt-4">
+            <GridLayout className="mt-4">
               {places.map((place, index) => {
                 return (
                   <div key={index} style={{ height: '115px' }} className="mb-3">
@@ -47,7 +48,7 @@ const Places: NextPage = () => {
                   </div>
                 );
               })}
-            </div>
+            </GridLayout>
           </div>
         </ContentLayout>
       </>
