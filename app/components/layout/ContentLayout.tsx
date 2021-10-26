@@ -8,9 +8,10 @@ interface ContentLayoutProps {
   form: React.ReactElement;
   children?: React.ReactElement;
   variant?: 'hideContainer';
+  buttonLabel: string;
 }
 
-export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, form, variant }) => {
+export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, form, variant, buttonLabel }) => {
   const [openSlideOver, setOpenSlideOver] = React.useState(false);
 
   return (
@@ -24,7 +25,7 @@ export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, f
             },
           }}
         >
-          Add a community
+          {buttonLabel}
         </ButtonElement>
       </div>
       <SlideOver open={openSlideOver} setOpen={setOpenSlideOver} />
