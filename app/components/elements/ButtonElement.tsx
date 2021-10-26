@@ -13,14 +13,17 @@ export const ButtonElement: React.FC<ButtonElementProps> = ({
   variant = 'gradient',
   children,
 }) => {
+  const buttonClass = variant === 'gradient' ? 'btn-gradient' : 'btn-border';
+
   return (
     <div className={`${className}`} onClick={functions?.onClick}>
-      <button className="btn-grad">{children}</button>
+      <button className={`${buttonClass}`}>{children}</button>
+
       <style jsx>{`
-        .btn-grad {
+        .btn-gradient {
           background-image: linear-gradient(to right, #02aab0 0%, #00cdac 51%, #02aab0 100%);
         }
-        .btn-grad {
+        .btn-gradient {
           padding: 15px 45px;
           transition: 0.5s;
           background-size: 200% auto;
@@ -30,30 +33,22 @@ export const ButtonElement: React.FC<ButtonElementProps> = ({
           border: none;
         }
 
-        .btn-grad:hover {
+        .btn-gradient:hover {
           background-position: right center; /* change the direction of the change here */
           color: #fff;
           text-decoration: none;
         }
 
-        // .btn-grad {
-        //   background-image: linear-gradient(to right, #0cebeb 0%, #20e3b2 51%, #0cebeb 100%);
-        // }
-        // .btn-grad {
-        //   padding: 15px 45px;
-        //   transition: 0.5s;
-        //   background-size: 200% auto;
-        //   // color: gray;
-        //   border: none;
-        //   display: block;
-        //   border-radius: 6px;
-        // }
+        .btn-border {
+          padding: 15px 45px;
+          background-color: transparent;
+          border: 1.75px solid #02aab0;
+          border-radius: 6px;
+        }
 
-        // .btn-grad:hover {
-        //   background-position: right center; /* change the direction of the change here */
-        //   color: #fff;
-        //   text-decoration: none;
-        // }
+        .btn-border:hover {
+          background-color: rgba(0, 205, 172, 0.12);
+        }
       `}</style>
     </div>
   );
