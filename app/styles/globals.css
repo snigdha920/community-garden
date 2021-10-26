@@ -30,7 +30,20 @@ h3 {
   opacity: var(--text-opacity);
 }
 
+h2 {
+  font-size: 36px !important;
+  opacity: 87%;
+}
+
 p {
   font-size: 20px;
   opacity: var(--text-opacity);
+}
+
+.centerhome{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
 }

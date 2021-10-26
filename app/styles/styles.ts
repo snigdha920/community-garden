@@ -3,3 +3,4 @@ export const Styles = {
   lightGrayBackgroundColor: 'rgba(218, 225, 219, 0.5)',
   opacity: '87%',
 };
+
