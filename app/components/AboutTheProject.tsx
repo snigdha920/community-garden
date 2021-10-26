@@ -30,7 +30,7 @@ export const AboutTheProject: React.FC = () => {
             // else align icon to the right
             const alignIcon = index % 2 ? 'left' : 'right';
             return (
-              <div key={index} className="p-4">
+              <div key={index} className='py-4'>
                 <TextIcon icon={text.icon} alignIcon={alignIcon}>
                   {text.text}
                 </TextIcon>

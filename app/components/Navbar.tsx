@@ -9,12 +9,12 @@ export const NavBar: React.FC = () => {
         fixed="top"
         style={{
           padding: 2,
-          height: '60px',
+          height: '50px',
           backgroundImage: 'linear-gradient(to right, #1CD8D2 0%, #93EDC7  51%, #1CD8D2  100%)',
         }}
       >
         <div style={{ marginLeft: 20 }}>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img src="/icons/sapling.svg" width="30" height="30" className="d-inline-block align-top" alt="logo" />
           </Navbar.Brand>
         </div>
@@ -23,7 +23,7 @@ export const NavBar: React.FC = () => {
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/places">My Community</Nav.Link>
           <Nav.Link href="#AboutTheProjectSection">About</Nav.Link>
-          <Nav.Link href="#">Contact us</Nav.Link>
+          <Nav.Link href="#ContactUsSection">Contact us</Nav.Link>
         </Nav>
       </Navbar>
     </>

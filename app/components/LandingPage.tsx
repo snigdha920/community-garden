@@ -15,7 +15,7 @@ export const LandingPage: React.FC = () => {
               <div>
                 <h2 style={{ paddingTop: '50px' }}>
                   Go to My Community&nbsp;&nbsp;
-                  <a href="#">
+                  <a href="/places">
                     <img src="/icons/next.svg" width="35"></img>
                   </a>
                 </h2>

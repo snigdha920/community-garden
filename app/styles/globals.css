@@ -22,7 +22,6 @@ a {
 
 h1 {
   font-size: 56px !important;
-  opacity: var(--text-opacity);
 }
 
 h3 {
@@ -40,10 +39,3 @@ p {
   opacity: var(--text-opacity);
 }
 
-.centerhome{
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  height: 100vh;
-  align-items: center;
-}
