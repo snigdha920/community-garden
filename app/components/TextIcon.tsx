@@ -2,17 +2,23 @@ import React from 'react';
 import { Styles } from '../styles/styles';
 
 interface TextIconProps {
-  children: string;
+  children: string | React.ReactElement;
   icon: React.ReactElement;
   alignIcon?: 'left' | 'right';
+  className?: string;
 }
 
-export const TextIcon: React.FC<TextIconProps> = ({ children, icon, alignIcon = 'right' }: TextIconProps) => {
+export const TextIcon: React.FC<TextIconProps> = ({
+  children,
+  icon,
+  className,
+  alignIcon = 'right',
+}: TextIconProps) => {
   const parentDivFlexStyle = alignIcon === 'right' ? '' : 'flex-row-reverse';
   const textAlign = alignIcon === 'right' ? undefined : 'right';
   const textPadding = alignIcon === 'right' ? '0 20px 0 0' : '0 0 0 20px';
   return (
-    <div className={`d-flex ${parentDivFlexStyle} justify-content-between align-items-center`}>
+    <div className={`d-flex ${parentDivFlexStyle} justify-content-between align-items-center ${className}`}>
       <p style={{ textAlign: textAlign, margin: textPadding }}>{children}</p>
 
       <div style={{ backgroundColor: Styles.lightGreenBackgroundColor }} className="rounded-circle p-4">
