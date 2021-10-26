@@ -29,6 +29,7 @@ export const NavBar: React.FC = () => {
           height: '60px',
           backgroundImage: 'linear-gradient(to right, #1CD8D2 0%,  #93EDC7  51%)',
           padding: '0 40px',
+          zIndex: 0,
         }}
         className="btn-grad"
       >
