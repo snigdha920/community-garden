@@ -13,7 +13,7 @@ export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, o
     <div>
       <div className="d-flex justify-content-between">
         <h3>{title}</h3>
-        <ButtonElement />
+        <ButtonElement functions={{ onClick: onBtnClick }} />
       </div>
       <BoxLayout className="mt-5">
         <div style={{ minHeight: '500px' }}>{children}</div>
