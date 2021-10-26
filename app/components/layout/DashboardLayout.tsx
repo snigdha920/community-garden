@@ -47,16 +47,16 @@ export const DashboardLayout: React.FC<DashBoardLayoutProps> = ({ place }) => {
         <>
           <div style={{ minHeight: '80px'}}>
             <TextIcon
-              icon={<img src="/icons/locationicon.png" width="20px" height="20px" alt="pin" />}
+              icon={<img src="/icons/analytics.png" width="20px" height="20px" alt="pin" />}
               className="px-4 pt-3 pb-2"
               alignIcon="left"
               alignText="left"
               iconSize="small"
             >
-              <b>{place}</b>
+              <b>Data</b>
             </TextIcon>
           </div>
-          <Container style={{marginBottom:'20'}}>
+          <Container className='mb-4'>
             <Row>
               {locationCharacteristics.map((item, index) => {
                 return <Col key={index}>{item.card}</Col>;
