@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import React from 'react';
 import { ButtonElement } from '../../components/elements/ButtonElement';
+import { AddCommunityForm } from '../../components/forms/AddCommunityForm';
 import { AppLayout } from '../../components/layout/AppLayout';
 import { ContentLayout } from '../../components/layout/ContentLayout';
 import { TextIcon } from '../../components/TextIcon';
@@ -13,7 +14,7 @@ const Places: NextPage = () => {
   return (
     <AppLayout>
       <>
-        <ContentLayout title="My Community" form={<div>Dummy form contents</div>} buttonLabel="Add a community">
+        <ContentLayout title="My Community" form={<AddCommunityForm />} buttonLabel="Add a community">
           <div>
             <TextIcon
               icon={<img src="/icons/planting.png" width="50px" height="50px" alt="planting" />}

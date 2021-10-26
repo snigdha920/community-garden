@@ -28,7 +28,7 @@ export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, f
           {buttonLabel}
         </ButtonElement>
       </div>
-      <SlideOver open={openSlideOver} setOpen={setOpenSlideOver} />
+      <SlideOver open={openSlideOver} setOpen={setOpenSlideOver} title={buttonLabel} formContents={form} />
       {variant === 'hideContainer' ? (
         children
       ) : (

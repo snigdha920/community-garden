@@ -2,7 +2,7 @@ import React from 'react';
 import { Styles } from '../styles/styles';
 
 interface TextIconProps {
-  children: string | React.ReactElement;
+  children?: string | React.ReactElement;
   icon: React.ReactElement;
   alignIcon?: 'left' | 'right';
   className?: string;

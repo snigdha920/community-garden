@@ -4,9 +4,11 @@ import React, { Fragment, SetStateAction } from 'react';
 interface SlideOverProps {
   open: boolean;
   setOpen: React.Dispatch<SetStateAction<boolean>>;
+  title: string;
+  formContents: React.ReactElement;
 }
 
-export const SlideOver: React.FC<SlideOverProps> = ({ open, setOpen }) => {
+export const SlideOver: React.FC<SlideOverProps> = ({ open, setOpen, title, formContents }) => {
   return (
     <div>
       <Transition.Root show={open} as={Fragment}>
@@ -23,10 +25,10 @@ export const SlideOver: React.FC<SlideOverProps> = ({ open, setOpen }) => {
                 leaveTo="translate-x-full"
               >
                 <div className="w-screen max-w-md">
-                  <div className="h-100 d-flex flex-column py-5 bg-white shadow overflow-y-scroll">
-                    <div className="px-5">
+                  <div className="h-100 d-flex flex-column py-5 px-4 bg-white shadow overflow-y-scroll">
+                    <div className="">
                       <div className="d-flex align-items-start justify-content-between">
-                        <Dialog.Title>Panel title</Dialog.Title>
+                        <Dialog.Title>{title}</Dialog.Title>
                         <div className="ml-3">
                           <button
                             type="button"
@@ -52,11 +54,9 @@ export const SlideOver: React.FC<SlideOverProps> = ({ open, setOpen }) => {
                         </div>
                       </div>
                     </div>
-                    <div className="mt-6 position-relative flex-1 px-4 sm:px-6">
+                    <div className="mt-6 position-relative flex-1">
                       {/* Replace with your content */}
-                      <div className="position-absolute inset-0 px-4 sm:px-6">
-                        <div className="h-100 border-2 border-dashed border-gray-200" aria-hidden="true" />
-                      </div>
+                      {formContents}
                       {/* /End replace */}
                     </div>
                   </div>
