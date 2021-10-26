@@ -16,7 +16,7 @@ export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, f
 
   return (
     <div style={{ zIndex: 10 }}>
-      <div className="mt-4 d-flex justify-content-between">
+      <div className="d-md-flex justify-content-between" style={{ marginTop: 65 }}>
         <h3>{title}</h3>
         <ButtonElement
           functions={{
@@ -24,6 +24,7 @@ export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, f
               setOpenSlideOver(true);
             },
           }}
+          className="pt-3 pt-md-0"
         >
           {buttonLabel}
         </ButtonElement>

@@ -15,6 +15,9 @@ export const SlideOver: React.FC<SlideOverProps> = ({ open, setOpen, title, form
         <Dialog as="div" className="position-fixed inset-0 overflow-hidden" onClose={setOpen} style={{ zIndex: 30 }}>
           <div className="position-absolute inset-0 overflow-hidden">
             <div className="position-fixed inset-y-0 right-0 pl-10 max-w-full d-flex">
+              <div className="DummyElement flex-shrink-0" aria-hidden="true">
+                {/* Dummy element to leave space on the left on smaller screens */}
+              </div>
               <Transition.Child
                 as={Fragment}
                 enter="ease-in-out duration-500"
@@ -28,7 +31,7 @@ export const SlideOver: React.FC<SlideOverProps> = ({ open, setOpen, title, form
                   <div className="h-100 d-flex flex-column py-5 px-4 bg-white shadow overflow-y-scroll">
                     <div className="">
                       <div className="d-flex align-items-start justify-content-between">
-                        <Dialog.Title>{title}</Dialog.Title>
+                        <Dialog.Title className="fs-3 fs-md-2 ">{title}</Dialog.Title>
                         <div className="ml-3">
                           <button
                             type="button"
@@ -111,6 +114,12 @@ export const SlideOver: React.FC<SlideOverProps> = ({ open, setOpen, title, form
 
         .translate-x-0 {
           transform: translateX(0);
+        }
+
+        @media only screen and (max-width: 768px) {
+          .DummyElement {
+            width: 15%;
+          }
         }
       `}</style>
     </div>
