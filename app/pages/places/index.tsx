@@ -7,7 +7,7 @@ const Places: NextPage = () => {
   return (
     <AppLayout>
       <>
-        <ContentLayout />
+        <ContentLayout title="Places" onBtnClick={() => console.log('clicked!')} />
       </>
     </AppLayout>
   );
