@@ -6,19 +6,19 @@ export const NavBar: React.FC = () => {
   const navItems: Array<{ label: string; href: string }> = [
     {
       label: 'Home',
-      href: '#',
+      href: '/',
     },
     {
       label: 'My community',
-      href: '/places',
+      href: '/my-community',
     },
     {
       label: 'About',
-      href: '#AboutTheProjectSection',
+      href: '/#AboutTheProjectSection',
     },
     {
       label: 'Contact us',
-      href: '#ContactUsSection',
+      href: '/#ContactUsSection',
     },
   ];
   return (
