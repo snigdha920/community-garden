@@ -7,14 +7,15 @@ interface ContentLayoutProps {
   title: string;
   form: React.ReactElement;
   children?: React.ReactElement;
+  variant?: 'hideContainer';
 }
 
-export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, form }) => {
+export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, form, variant }) => {
   const [openSlideOver, setOpenSlideOver] = React.useState(false);
 
   return (
     <div style={{ zIndex: 10 }}>
-      <div className="mt-2 d-flex justify-content-between">
+      <div className="mt-5 d-flex justify-content-between">
         <h3>{title}</h3>
         <ButtonElement
           functions={{
@@ -25,9 +26,13 @@ export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, f
         />
       </div>
       <SlideOver open={openSlideOver} setOpen={setOpenSlideOver} />
-      <BoxLayout className="mt-5">
-        <div style={{ minHeight: '500px' }}>{children}</div>
-      </BoxLayout>
+      {variant === 'hideContainer' ? (
+        children
+      ) : (
+        <BoxLayout className="mt-5">
+          <div style={{ minHeight: '500px' }}>{children}</div>
+        </BoxLayout>
+      )}
     </div>
   );
 };
