@@ -5,7 +5,12 @@ import { Col, Container, Row } from 'react-bootstrap';
 export const LandingPage: React.FC = () => {
   return (
     <>
-      <Container fluid>
+      <Container
+        fluid
+        style={{
+          height: '100vh',
+        }}
+      >
         <Row>
           <Col className="centerhome">
             <Container>

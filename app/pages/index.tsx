@@ -17,20 +17,14 @@ const Home: NextPage = () => {
           <link rel="icon" href="/icons/sapling.svg" />
         </Head>
 
-        <div id="LandingPage"
-          style={{
-            // backgroundColor: Styles.lightGreenBackgroundColor,
-            height: '100vh',
-          }}
-        >
+        <div id="LandingPage">
           <LandingPage />
         </div>
 
-        <div className="AboutTheProjectSection" id="AboutTheProjectSection">
+        <div className="AboutTheProjectSection mb-5" id="AboutTheProjectSection">
           <AboutTheProject />
         </div>
-        <br/>
-        <br/>
+
         <div className="ContactUsSection" id="ContactUsSection">
           <ContactUs />
         </div>
