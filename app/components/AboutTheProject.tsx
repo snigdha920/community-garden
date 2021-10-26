@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
+import { BoxLayout } from './layout/BoxLayout';
 import { TextIcon } from './TextIcon';
 
 export const AboutTheProject: React.FC = () => {
@@ -21,27 +22,23 @@ export const AboutTheProject: React.FC = () => {
   ];
   return (
     <div>
-      <h1 className="mb-5">About the Project</h1>
-      <div
-        style={{
-          borderRadius: '6px',
-          overflow: 'hidden', // this class is important if the child divs also have a border radius
-          boxShadow: '0 5px 5px -3px rgba(5, 30, 55, 0.1), 0 3px 15px 2px rgba(5, 30, 55, 0.05)',
-        }}
-      >
-        {aboutTheProjectParagraphs.map((text, index) => {
-          // if the index is odd then align icon to the left
-          // else align icon to the right
-          const alignIcon = index % 2 ? 'left' : 'right';
-          return (
-            <div key={index} className="bg-white p-4">
-              <TextIcon icon={text.icon} alignIcon={alignIcon}>
-                {text.text}
-              </TextIcon>
-            </div>
-          );
-        })}
-      </div>
+      <h3 className="mb-5">About the Project</h3>
+      <BoxLayout>
+        <>
+          {aboutTheProjectParagraphs.map((text, index) => {
+            // if the index is odd then align icon to the left
+            // else align icon to the right
+            const alignIcon = index % 2 ? 'left' : 'right';
+            return (
+              <div key={index} className="p-4">
+                <TextIcon icon={text.icon} alignIcon={alignIcon}>
+                  {text.text}
+                </TextIcon>
+              </div>
+            );
+          })}
+        </>
+      </BoxLayout>
     </div>
   );
 };
