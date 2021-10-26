@@ -3,6 +3,8 @@ import { useRouter } from 'next/dist/client/router';
 import React from 'react';
 import { AppLayout } from '../../../components/layout/AppLayout';
 import { ContentLayout } from '../../../components/layout/ContentLayout';
+import { DashboardLayout } from '../../../components/layout/DashboardLayout';
+import { TextIcon } from '../../../components/TextIcon';
 
 const Places: NextPage = () => {
   const places = ['Pomona', 'Yorba Linda', 'Chino Hills'];
@@ -14,10 +16,12 @@ const Places: NextPage = () => {
         <ContentLayout
           title={community}
           form={<div>Dummy form contents</div>}
-          variant="hideContainer"
+          variant='hideContainer'
           buttonLabel="Add a crop"
         >
-          <div></div>
+          <div>
+            <DashboardLayout place={community}></DashboardLayout>
+          </div>
         </ContentLayout>
       </>
     </AppLayout>
