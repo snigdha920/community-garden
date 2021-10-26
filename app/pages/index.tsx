@@ -8,10 +8,10 @@ const Home: NextPage = () => {
     <div
       style={{
         padding: '50px 150px',
+        backgroundImage: "url('/images/green-lime-watercolor-texture-background.jpg')",
         // backgroundColor: Styles.lightGrayBackgroundColor,
         minHeight: '100vh',
         // backgroundColor: Styles.lightGreenBackgroundColor,
-        backgroundImage: "url('/images/green-lime-watercolor-texture-background.jpg')",
       }}
     >
       <Head>
