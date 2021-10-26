@@ -8,15 +8,33 @@ export const ContactUs: React.FC = () => {
     //This array is used for displaying the photos and roles of project contruibuters
     {
       desc: <ContactPersonDesc name="Melvin Houston" role="Hardware engineer"></ContactPersonDesc>,
-      image: <img src="/images/melvin-pic.jpg" alt="melvin-img" className="rounded-circle" width="160" height="160" />,
+      image: (
+        <img
+          src="/images/melvin-pic.jpg"
+          alt="melvin-img"
+          className="rounded-circle shadow-sm"
+          width="160"
+          height="160"
+        />
+      ),
     },
     {
       desc: <ContactPersonDesc name="Neeyati Ajmera " role="Software engineer"></ContactPersonDesc>,
-      image: <img src="/images/neeyati.jpg" alt="neeyati-img" className="rounded-circle" width="160" height="160" />,
+      image: (
+        <img
+          src="/images/neeyati.jpg"
+          alt="neeyati-img"
+          className="rounded-circle shadow-sm"
+          width="160"
+          height="160"
+        />
+      ),
     },
     {
       desc: <ContactPersonDesc name="Kayla" role="Database manager"></ContactPersonDesc>,
-      image: <img src="/images/kayla.jpeg" alt="kayla-img" className="rounded-circle" width="160" height="160" />,
+      image: (
+        <img src="/images/kayla.jpeg" alt="kayla-img" className="rounded-circle shadow-sm" width="160" height="160" />
+      ),
     },
   ];
 
@@ -29,7 +47,7 @@ export const ContactUs: React.FC = () => {
           <div className="row pad">
             {projectContributers.map((item, index) => {
               return (
-                <div key={index} className="col-lg-4 padding">
+                <div key={index} className="col-lg-4 padding py-3 py-md-0">
                   {item.image}
                   {item.desc}
                 </div>
