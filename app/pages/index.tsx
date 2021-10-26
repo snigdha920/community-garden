@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import { AboutTheProject } from '../components/AboutTheProject';
+import { ContactUs } from '../components/ContactUs';
 import { LandingPage } from '../components/LandingPage';
 import { AppLayout } from '../components/layout/AppLayout';
 
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
           <link rel="icon" href="/icons/sapling.svg" />
         </Head>
 
-        <div
+        <div id="LandingPage"
           style={{
             // backgroundColor: Styles.lightGreenBackgroundColor,
             height: '100vh',
@@ -27,6 +28,11 @@ const Home: NextPage = () => {
 
         <div className="AboutTheProjectSection" id="AboutTheProjectSection">
           <AboutTheProject />
+        </div>
+        <br/>
+        <br/>
+        <div className="ContactUsSection" id="ContactUsSection">
+          <ContactUs />
         </div>
       </>
     </AppLayout>
