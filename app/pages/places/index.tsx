@@ -7,7 +7,7 @@ const Places: NextPage = () => {
   return (
     <AppLayout>
       <>
-        <ContentLayout title="Places" onBtnClick={() => console.log('clicked!')} />
+        <ContentLayout title="Places" form={<div>Dummy form contents</div>} />
       </>
     </AppLayout>
   );
