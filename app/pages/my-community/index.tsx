@@ -16,9 +16,10 @@ const Places: NextPage = () => {
         <ContentLayout title="My Community" form={<div>Dummy form contents</div>} buttonLabel="Add a community">
           <div>
             <TextIcon
-              icon={<img src="/icons/planting.png" width="70px" height="70px" alt="planting" />}
+              icon={<img src="/icons/planting.png" width="50px" height="50px" alt="planting" />}
               className="px-4 pt-3 pb-2"
               alignIcon="left"
+              alignText="left"
             >
               <>
                 {' '}
