@@ -21,7 +21,20 @@ h1 {
   opacity: 87%;
 }
 
+h2 {
+  font-size: 36px !important;
+  opacity: 87%;
+}
+
 p {
   font-size: 20px;
   opacity: 87%;
+}
+
+.centerhome{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
 }
