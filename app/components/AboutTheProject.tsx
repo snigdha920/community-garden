@@ -21,7 +21,7 @@ export const AboutTheProject: React.FC = () => {
   ];
   return (
     <div>
-      <h1 className="mb-5">About the Project</h1>
+      <h3 className="mb-5">About the Project</h3>
       <div
         style={{
           borderRadius: '6px',
