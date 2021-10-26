@@ -18,7 +18,7 @@ const Places: NextPage = () => {
           <div>
             <TextIcon
               icon={<img src="/icons/planting.png" width="50px" height="50px" alt="planting" />}
-              className="px-4 pt-3 pb-2"
+              className="pt-3 pb-2"
               alignIcon="left"
               alignText="left"
             >
@@ -35,7 +35,7 @@ const Places: NextPage = () => {
                   <ButtonElement
                     key={index}
                     variant="border"
-                    className="m-4"
+                    className="me-4 mt-4"
                     functions={{ onClick: () => router.push(`/my-community/${place}/dashboard`) }}
                   >
                     {place}
