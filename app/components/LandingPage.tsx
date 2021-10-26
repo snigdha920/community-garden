@@ -5,12 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 export const LandingPage: React.FC = () => {
   return (
     <>
-      <Container
-        fluid
-        style={{
-          height: '100vh',
-        }}
-      >
+      <Container fluid className="vh-100">
         <Row>
           <Col className="centerhome">
             <Container>
@@ -28,7 +23,7 @@ export const LandingPage: React.FC = () => {
               </div>
             </Container>
           </Col>
-          <Col>
+          <Col className="d-none d-md-block">
             <img src="/icons/homepage-logo.svg" width="100%" height="100%" alt="homepage-logo"></img>
           </Col>
         </Row>

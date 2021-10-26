@@ -9,12 +9,9 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }: AppLayoutProps
   return (
     <div
       style={{
-        padding: '80px',
         backgroundImage: "url('/images/green-lime-watercolor-texture-background.jpg')",
-        // backgroundColor: Styles.lightGrayBackgroundColor,
-        minHeight: '100vh',
-        // backgroundColor: Styles.lightGreenBackgroundColor,
       }}
+      className="p-3 p-md-5 min-vh-100"
     >
       <div>
         <NavBar />
