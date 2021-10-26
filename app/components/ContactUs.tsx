@@ -1,35 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
+import { ContactPersonDesc } from './ContactPersonDesc';
 import { BoxLayout } from './layout/BoxLayout';
 
 export const ContactUs: React.FC = () => {
   const projectContributers: Array<{ desc: React.ReactElement; image: React.ReactElement }> = [
     //This array is used for displaying the photos and roles of project contruibuters
     {
-      desc: (
-        <p className="sub-heading">
-          <b>Melvin Houston</b>
-          <br /> Hardware engineer
-        </p>
-      ),
+      desc: <ContactPersonDesc name="Melvin Houston" role="Hardware engineer"></ContactPersonDesc>,
       image: <img src="/images/melvin-pic.jpg" alt="melvin-img" className="rounded-circle" width="160" height="160" />,
     },
     {
-      desc: (
-        <p className="sub-heading">
-          <b>Neeyati Ajmera</b>
-          <br /> Software engineer{' '}
-        </p>
-      ),
+      desc: <ContactPersonDesc name="Neeyati Ajmera " role="Software engineer"></ContactPersonDesc>,
       image: <img src="/images/neeyati.jpg" alt="neeyati-img" className="rounded-circle" width="160" height="160" />,
     },
     {
-      desc: (
-        <p className="sub-heading">
-          <b>Kayla</b>
-          <br /> Database manager
-        </p>
-      ),
+      desc: <ContactPersonDesc name="Kayla" role="Database manager"></ContactPersonDesc>,
       image: <img src="/images/kayla.jpeg" alt="kayla-img" className="rounded-circle" width="160" height="160" />,
     },
   ];
@@ -49,6 +35,23 @@ export const ContactUs: React.FC = () => {
                 </div>
               );
             })}
+            <style jsx>
+              {`
+                .sub-heading {
+                  padding: 1rem;
+                  font-size: 0.8rem;
+                }
+                .pad {
+                  text-align: center;
+                  padding-top: 50px;
+                  padding-bottom: 1rem;
+                }
+
+                .rounded-circle {
+                  object-fit: cover;
+                }
+              `}
+            </style>
           </div>
 
           <p>
