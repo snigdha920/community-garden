@@ -34,7 +34,7 @@ export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, f
         children
       ) : (
         <BoxLayout className="mt-5">
-          <div style={{ minHeight: '500px' }}>{children}</div>
+          <div style={{ minHeight: '400px' }}>{children}</div>
         </BoxLayout>
       )}
     </div>

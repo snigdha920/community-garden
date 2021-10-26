@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
@@ -29,17 +30,21 @@ const Places: NextPage = () => {
               </>
             </TextIcon>
 
-            <div className="d-flex flex-wrap">
+            <div className="row row-cols-md-3 mt-4">
               {places.map((place, index) => {
                 return (
-                  <ButtonElement
-                    key={index}
-                    variant="border"
-                    className="me-4 mt-4"
-                    functions={{ onClick: () => router.push(`/my-community/${place}/dashboard`) }}
-                  >
-                    {place}
-                  </ButtonElement>
+                  <div key={index} style={{ height: '115px' }}>
+                    <ButtonElement
+                      variant="border"
+                      className="h-100"
+                      layout="stretch"
+                      functions={{ onClick: () => router.push(`/my-community/${place}/dashboard`) }}
+                      fontSize="28px"
+                      icon={<img src="/icons/google-maps.png" width="40px" height="40px" />}
+                    >
+                      {place}
+                    </ButtonElement>
+                  </div>
                 );
               })}
             </div>
