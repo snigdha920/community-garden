@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavBar } from '../Navbar';
 
 interface AppLayoutProps {
   children: React.ReactElement;
@@ -15,6 +16,9 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }: AppLayoutProps
         // backgroundColor: Styles.lightGreenBackgroundColor,
       }}
     >
+      <div>
+        <NavBar />
+      </div>
       {children}
     </div>
   );

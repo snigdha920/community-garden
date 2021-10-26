@@ -11,12 +11,12 @@ interface ContentLayoutProps {
 export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, form }) => {
   return (
     <div>
-      <div className="d-flex justify-content-between">
+      <div className="mt-2 d-flex justify-content-between">
         <h3>{title}</h3>
         <ButtonElement
           functions={{
             onClick: () => {
-              // TODO
+              console.log(111, title);
             },
           }}
         />

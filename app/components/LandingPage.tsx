@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 export const LandingPage: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ export const LandingPage: React.FC = () => {
         <Row>
           <Col className="centerhome">
             <Container>
-              <h1 className="homeh1">
+              <h1>
                 Community Garden <br />
                 Project
               </h1>

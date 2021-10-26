@@ -22,9 +22,9 @@ export const AboutTheProject: React.FC = () => {
   ];
   return (
     <div>
-      <h3 className="mb-5">About the Project</h3>
-      <BoxLayout>
+      <BoxLayout className="h-100">
         <>
+          <h3 className="px-4 pt-4 text-center">About the Project</h3>
           {aboutTheProjectParagraphs.map((text, index) => {
             // if the index is odd then align icon to the left
             // else align icon to the right
