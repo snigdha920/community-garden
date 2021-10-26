@@ -38,7 +38,7 @@ export const NavBar: React.FC = () => {
             <img src="/icons/sapling.svg" width="30" height="30" className="d-inline-block align-top" alt="logo" />
           </Navbar.Brand>
         </div>
-
+       
         <Nav style={{ marginLeft: 'auto' }}>
           {navItems.map((item, index) => {
             return (
