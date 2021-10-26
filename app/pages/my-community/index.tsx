@@ -33,7 +33,7 @@ const Places: NextPage = () => {
             <div className="row row-cols-md-3 mt-4">
               {places.map((place, index) => {
                 return (
-                  <div key={index} style={{ height: '115px' }}>
+                  <div key={index} style={{ height: '115px' }} className="mb-3">
                     <ButtonElement
                       variant="border"
                       className="h-100"
