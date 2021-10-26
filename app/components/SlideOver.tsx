@@ -12,25 +12,13 @@ export const SlideOver: React.FC<SlideOverProps> = ({ open, setOpen }) => {
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="position-fixed inset-0 overflow-hidden" onClose={setOpen} style={{ zIndex: 30 }}>
           <div className="position-absolute inset-0 overflow-hidden">
-            <Transition.Child
-              as={Fragment}
-              enter="ease-in-out duration-500"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="ease-in-out duration-500"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <Dialog.Overlay className="position-absolute inset-0 bg-red transition-opacity" />
-            </Transition.Child>
-
             <div className="position-fixed inset-y-0 right-0 pl-10 max-w-full d-flex">
               <Transition.Child
                 as={Fragment}
-                enter="transform transition ease-in-out duration-500"
+                enter="ease-in-out duration-500"
                 enterFrom="translate-x-full"
                 enterTo="translate-x-0"
-                leave="transform transition ease-in-out duration-500"
+                leave="ease-in-out duration-500"
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
@@ -38,15 +26,28 @@ export const SlideOver: React.FC<SlideOverProps> = ({ open, setOpen }) => {
                   <div className="h-100 d-flex flex-column py-5 bg-white shadow overflow-y-scroll">
                     <div className="px-5">
                       <div className="d-flex align-items-start justify-content-between">
-                        <Dialog.Title className="text-lg font-medium text-gray-900">Panel title</Dialog.Title>
-                        <div className="ml-3 h-7 flex items-center">
+                        <Dialog.Title>Panel title</Dialog.Title>
+                        <div className="ml-3">
                           <button
                             type="button"
-                            className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            className="bg-white"
+                            style={{ border: 'none' }}
                             onClick={() => setOpen(false)}
                           >
-                            <span className="sr-only">Close panel</span>
-                            {/* <XIcon className="h-6 w-6" aria-hidden="true" /> */}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              style={{ width: 20, height: 20 }}
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="black"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M6 18L18 6M6 6l12 12"
+                              />
+                            </svg>
                           </button>
                         </div>
                       </div>
@@ -101,40 +102,15 @@ export const SlideOver: React.FC<SlideOverProps> = ({ open, setOpen }) => {
         }
 
         .duration-500 {
-          transition-duration: 500ms;
+          transition-duration: 700ms;
         }
 
         .translate-x-full {
-          --tw-translate-x: 100%;
+          transform: translateX(100%);
         }
 
         .translate-x-0 {
-          --tw-translate-x: 0px;
-        }
-
-        .transform {
-          --tw-translate-x: 0;
-          --tw-translate-y: 0;
-          --tw-rotate: 0;
-          --tw-skew-x: 0;
-          --tw-skew-y: 0;
-          --tw-scale-x: 1;
-          --tw-scale-y: 1;
-          transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
-            skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-        }
-
-        .transition {
-          transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform,
-            filter, backdrop-filter;
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-duration: 150ms;
-        }
-
-        .transition-opacity {
-          transition-property: opacity;
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-duration: 150ms;
+          transform: translateX(0);
         }
       `}</style>
     </div>
