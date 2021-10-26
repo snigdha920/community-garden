@@ -4,12 +4,18 @@ interface ButtonElementProps {
   className?: string;
   functions?: { onClick?: () => void };
   variant?: 'border' | 'gradient';
+  children: string;
 }
 
-export const ButtonElement: React.FC<ButtonElementProps> = ({ className, functions, variant = 'gradient' }) => {
+export const ButtonElement: React.FC<ButtonElementProps> = ({
+  className,
+  functions,
+  variant = 'gradient',
+  children,
+}) => {
   return (
     <div className={`${className}`} onClick={functions?.onClick}>
-      <button className="btn-grad">Add a place</button>
+      <button className="btn-grad">{children}</button>
       <style jsx>{`
         .btn-grad {
           background-image: linear-gradient(to right, #02aab0 0%, #00cdac 51%, #02aab0 100%);

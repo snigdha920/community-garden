@@ -15,7 +15,7 @@ export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, f
 
   return (
     <div style={{ zIndex: 10 }}>
-      <div className="mt-5 d-flex justify-content-between">
+      <div className="mt-4 d-flex justify-content-between">
         <h3>{title}</h3>
         <ButtonElement
           functions={{
@@ -23,7 +23,9 @@ export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, f
               setOpenSlideOver(true);
             },
           }}
-        />
+        >
+          Add a community
+        </ButtonElement>
       </div>
       <SlideOver open={openSlideOver} setOpen={setOpenSlideOver} />
       {variant === 'hideContainer' ? (
