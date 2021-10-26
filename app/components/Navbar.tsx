@@ -38,8 +38,14 @@ export const NavBar: React.FC = () => {
         <Navbar.Brand href="/">
           <img src="/icons/sapling.svg" width="30" height="30" className="d-inline-block align-top " alt="logo" />
         </Navbar.Brand>
-        <Navbar.Toggle id="responsive-navbar-nav" style={{ height: '60px', border: 'none' }} />
-        <Navbar.Collapse>
+        <Navbar.Toggle
+          id="responsive-navbar-nav"
+          style={{
+            height: '60px',
+            border: 'none',
+          }}
+        />
+        <Navbar.Collapse style={{ backgroundImage: 'linear-gradient(to right, #1CD8D2 0%,  #93EDC7  51%)' }}>
           <Nav className="ms-auto">
             {navItems.map((item, index) => {
               return (
