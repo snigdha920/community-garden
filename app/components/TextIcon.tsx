@@ -7,25 +7,51 @@ interface TextIconProps {
   alignIcon?: 'left' | 'right';
   className?: string;
   alignText?: 'left' | 'right';
+  iconSize?: 'large' | 'small';
 }
 
 export const TextIcon: React.FC<TextIconProps> = ({
   children,
   icon,
   className,
-  alignText,
-  alignIcon = 'right',
+  alignText = 'left',
+  alignIcon = 'left',
+  iconSize = 'large',
 }: TextIconProps) => {
-  const parentDivFlexStyle = alignIcon === 'right' ? '' : 'flex-row-reverse';
-  const textAlign = alignText ? alignText : alignIcon === 'right' ? undefined : 'right';
+  const parentDivFlexStyle = alignIcon === 'right' ? '' : '';
+  // const textAlign = alignText ? alignText : alignIcon === 'right' ? undefined : 'right';
+  const isIconSizeLarge = iconSize === 'large' ? true : false;
+  const defaultPadding = 'p-4';
+
   const textPadding = alignIcon === 'right' ? '0 20px 0 0' : '0 0 0 20px';
   return (
-    <div className={`d-flex ${parentDivFlexStyle} justify-content-between align-items-center ${className}`}>
-      <p style={{ textAlign: textAlign, margin: textPadding }}>{children}</p>
+    <div className={`d-flex ${parentDivFlexStyle} align-items-center ${className}`}>
+      {alignIcon === 'right' ? (
+        <>
+          <p style={{ textAlign: alignText, margin: textPadding }}>{children}</p>
 
-      <div style={{ backgroundColor: Styles.lightGreenBackgroundColor }} className="rounded-circle p-4">
-        <div>{icon}</div>
-      </div>
+          <div
+            style={{ backgroundColor: Styles.lightGreenBackgroundColor }}
+            className={`rounded-circle ${
+              isIconSizeLarge ? defaultPadding : 'p-2'
+            } d-flex justify-content-center align-items-center`}
+          >
+            {icon}
+          </div>
+        </>
+      ) : (
+        <>
+          <div
+            style={{ backgroundColor: Styles.lightGreenBackgroundColor }}
+            className={`rounded-circle ${
+              isIconSizeLarge ? defaultPadding : 'p-2'
+            } d-flex justify-content-center align-items-center`}
+          >
+            {icon}
+          </div>
+          <p style={{ textAlign: alignText, margin: textPadding }}>{children}</p>
+        </>
+      )}
     </div>
   );
 };

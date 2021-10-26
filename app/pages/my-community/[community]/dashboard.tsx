@@ -16,11 +16,11 @@ const Places: NextPage = () => {
         <ContentLayout
           title={community}
           form={<div>Dummy form contents</div>}
-          variant="hideContainer"
+          variant='hideContainer'
           buttonLabel="Add a crop"
         >
           <div>
-            Hello
+            <DashboardLayout place={community}></DashboardLayout>
           </div>
         </ContentLayout>
       </>
