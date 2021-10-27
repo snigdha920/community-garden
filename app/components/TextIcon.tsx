@@ -34,7 +34,7 @@ export const TextIcon: React.FC<TextIconProps> = ({
             style={{ backgroundColor: Styles.lightGreenBackgroundColor }}
             className={`rounded-circle ${
               isIconSizeLarge ? defaultPadding : 'p-2'
-            } d-flex justify-content-center align-items-center`}
+            } d-none d-md-flex justify-content-center align-items-center`}
           >
             {icon}
           </div>
@@ -45,7 +45,7 @@ export const TextIcon: React.FC<TextIconProps> = ({
             style={{ backgroundColor: Styles.lightGreenBackgroundColor }}
             className={`rounded-circle ${
               isIconSizeLarge ? defaultPadding : 'p-2'
-            } d-flex justify-content-center align-items-center`}
+            } d-none d-md-flex justify-content-center align-items-center`}
           >
             {icon}
           </div>

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { Col } from 'react-bootstrap';
+import { ButtonElement } from '../elements/ButtonElement';
 import { CardElement } from '../elements/CardElement';
 import { TextIcon } from '../TextIcon';
 import { BoxLayout } from './BoxLayout';
@@ -16,10 +17,24 @@ export const DashboardLayout: React.FC<DashBoardLayoutProps> = ({ place }) => {
       card: <CardElement label="Sunlight" value="Excellent" icon="/icons/sun.png"></CardElement>,
     },
     {
-      card: <CardElement label="Temperature" value="30 °C" icon="/icons/temperature.png"></CardElement>,
+      card: <CardElement label="Temperature" value="30 °C" icon="/icons/thermometer.png"></CardElement>,
     },
     {
       card: <CardElement label="Humidity" value="50%" icon="/icons/humidity.png"></CardElement>,
+    },
+  ];
+
+  const cropDataTableHeaders = ['Name', 'Soil Moisture', 'Water pump status'];
+  const cropData: Array<{ name: string; soilMoisture: string; waterPumpStatus: React.ReactElement }> = [
+    {
+      name: 'Apple',
+      soilMoisture: '20',
+      waterPumpStatus: <ButtonElement>TODO</ButtonElement>,
+    },
+    {
+      name: 'Bananas',
+      soilMoisture: '22',
+      waterPumpStatus: <ButtonElement>TODO</ButtonElement>,
     },
   ];
 
@@ -29,16 +44,15 @@ export const DashboardLayout: React.FC<DashBoardLayoutProps> = ({ place }) => {
         <>
           <div style={{ minHeight: '80px' }}>
             <TextIcon
-              icon={<img src="/icons/analytics.png" width="20px" height="20px" alt="pin" />}
-              className="px-4 pt-3 pb-2"
+              icon={<img src="/icons/analytics.png" width="50px" height="50px" alt="pin" />}
+              className="py-2"
               alignIcon="left"
               alignText="left"
-              iconSize="small"
             >
-              <b>Data</b>
+              Data collected from sensors placed at your location. This data is common for all your crops.
             </TextIcon>
           </div>
-          <GridLayout>
+          <GridLayout className="mt-4">
             {locationCharacteristics.map((item, index) => {
               return (
                 <Col key={index} className="mb-4">
@@ -47,6 +61,41 @@ export const DashboardLayout: React.FC<DashBoardLayoutProps> = ({ place }) => {
               );
             })}
           </GridLayout>
+        </>
+      </BoxLayout>
+      <BoxLayout className="mt-5">
+        <>
+          <div style={{ minHeight: '80px' }}>
+            <TextIcon
+              icon={<img src="/icons/plant.png" width="50px" height="50px" alt="pin" />}
+              className="py-2"
+              alignIcon="left"
+              alignText="left"
+            >
+              Data collected about your crops from sensors placed at your location. This data is crop specific.
+            </TextIcon>
+          </div>
+
+          <GridLayout className="mt-4">
+            {cropDataTableHeaders.map((header, index) => {
+              return (
+                <>
+                  <Col key={index}>{header}</Col>
+                </>
+              );
+            })}
+          </GridLayout>
+          <div className="h-1 w-100 border-t"></div>
+          {cropData.map((data, index) => {
+            return (
+              <GridLayout className="mt-1" key={index}>
+                <Col>{data.name as string}</Col>
+                <Col>{data.soilMoisture as string}</Col>
+                <Col>{data.waterPumpStatus}</Col>
+                <div className="h-1 w-100 border-t"></div>
+              </GridLayout>
+            );
+          })}
         </>
       </BoxLayout>
     </>

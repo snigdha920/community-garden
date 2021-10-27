@@ -17,14 +17,13 @@ export const ContentLayout: React.FC<ContentLayoutProps> = ({ children, title, f
   return (
     <div style={{ zIndex: 10 }}>
       <div className="d-md-flex justify-content-between" style={{ marginTop: 65 }}>
-        <h3>{title}</h3>
+        <h3 className="pb-3 pb-md-0">{title}</h3>
         <ButtonElement
           functions={{
             onClick: () => {
               setOpenSlideOver(true);
             },
           }}
-          className="pt-3 pt-md-0"
         >
           {buttonLabel}
         </ButtonElement>
