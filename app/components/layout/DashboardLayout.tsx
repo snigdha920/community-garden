@@ -5,6 +5,7 @@ import { CardElement } from '../elements/CardElement';
 import { TextIcon } from '../TextIcon';
 import { BoxLayout } from './BoxLayout';
 import { GridLayout } from './GridLayout';
+import { MDBSwitch } from 'mdb-react-ui-kit';
 
 interface DashBoardLayoutProps {
   place: string;
@@ -24,18 +25,18 @@ export const DashboardLayout: React.FC<DashBoardLayoutProps> = ({ place }) => {
   ];
 
   const cropDataTableHeaders = ['Name', 'Soil Moisture', 'Water pump status'];
-  const cropData: Array<{ name: string; soilMoisture: string; waterPumpStatus: string }> = [
+  const cropData: Array<{ name: string; soilMoisture: string; waterPumpStatus: React.ReactElement }> = [
     {
       name: 'Apple',
       soilMoisture: '20',
       // waterPumpStatus: <ButtonElement>TODO</ButtonElement>,
-      waterPumpStatus: 'On',
+      waterPumpStatus: <MDBSwitch id='flexSwitchCheckDefault'></MDBSwitch>,
     },
     {
       name: 'Bananas',
       soilMoisture: '22',
       // waterPumpStatus: <ButtonElement>TODO</ButtonElement>,
-      waterPumpStatus: 'Off',
+      waterPumpStatus: <MDBSwitch id='flexSwitchCheckDefault'></MDBSwitch>,
     },
   ];
 
@@ -80,7 +81,7 @@ export const DashboardLayout: React.FC<DashBoardLayoutProps> = ({ place }) => {
           <GridLayout className="mt-4">
             <>
               {cropDataTableHeaders.map((header, index) => {
-                return <div key={index}>{header}</div>;
+                return <div key={index}><b>{header}</b></div>;
               })}
             </>
             <div className="h-1 w-100 border-top my-2"></div>
@@ -89,7 +90,7 @@ export const DashboardLayout: React.FC<DashBoardLayoutProps> = ({ place }) => {
           {cropData.map((data, index) => {
             return (
               <GridLayout className="my-1" key={index}>
-                <Col>{data.name as string}</Col>
+                <Col><i>{data.name as string}</i></Col>
                 <Col>{data.soilMoisture as string}</Col>
                 <Col>{data.waterPumpStatus}</Col>
                 <div className="h-1 w-100 border-top my-2"></div>
