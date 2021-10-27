@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { Col } from 'react-bootstrap';
-import { ButtonElement } from '../elements/ButtonElement';
 import { CardElement } from '../elements/CardElement';
 import { TextIcon } from '../TextIcon';
 import { BoxLayout } from './BoxLayout';
@@ -25,16 +24,18 @@ export const DashboardLayout: React.FC<DashBoardLayoutProps> = ({ place }) => {
   ];
 
   const cropDataTableHeaders = ['Name', 'Soil Moisture', 'Water pump status'];
-  const cropData: Array<{ name: string; soilMoisture: string; waterPumpStatus: React.ReactElement }> = [
+  const cropData: Array<{ name: string; soilMoisture: string; waterPumpStatus: string }> = [
     {
       name: 'Apple',
       soilMoisture: '20',
-      waterPumpStatus: <ButtonElement>TODO</ButtonElement>,
+      // waterPumpStatus: <ButtonElement>TODO</ButtonElement>,
+      waterPumpStatus: 'On',
     },
     {
       name: 'Bananas',
       soilMoisture: '22',
-      waterPumpStatus: <ButtonElement>TODO</ButtonElement>,
+      // waterPumpStatus: <ButtonElement>TODO</ButtonElement>,
+      waterPumpStatus: 'Off',
     },
   ];
 
@@ -77,22 +78,21 @@ export const DashboardLayout: React.FC<DashBoardLayoutProps> = ({ place }) => {
           </div>
 
           <GridLayout className="mt-4">
-            {cropDataTableHeaders.map((header, index) => {
-              return (
-                <>
-                  <Col key={index}>{header}</Col>
-                </>
-              );
-            })}
+            <>
+              {cropDataTableHeaders.map((header, index) => {
+                return <div key={index}>{header}</div>;
+              })}
+            </>
+            <div className="h-1 w-100 border-top my-2"></div>
           </GridLayout>
-          <div className="h-1 w-100 border-t"></div>
+
           {cropData.map((data, index) => {
             return (
-              <GridLayout className="mt-1" key={index}>
+              <GridLayout className="my-1" key={index}>
                 <Col>{data.name as string}</Col>
                 <Col>{data.soilMoisture as string}</Col>
                 <Col>{data.waterPumpStatus}</Col>
-                <div className="h-1 w-100 border-t"></div>
+                <div className="h-1 w-100 border-top my-2"></div>
               </GridLayout>
             );
           })}

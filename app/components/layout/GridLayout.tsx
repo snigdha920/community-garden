@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface GridLayoutProps {
-  children?: React.ReactElement[];
+  children?: React.ReactElement[] | Element[];
   className?: string;
   columns?: 1 | 2 | 3 | 4 | 5 | 6;
 }
